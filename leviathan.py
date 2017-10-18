@@ -89,7 +89,7 @@ print 'Leviathan: Before we start there are a few things we need to know about y
 wait2()
 dotprint2()
 
-birthday = raw_input ('Leviathan: What is your birthday(m/d/yyyy)?')
+birthday = raw_input ('Leviathan: What is your birthday(m/d/yyyy)? ')
 birthday_date = datetime.strptime(birthday, '%m/%d/%Y').date()
 difference_in_years = relativedelta(my_date, birthday_date).years
 new_bday = date(birthday_date.year+difference_in_years, birthday_date.month, birthday_date.day)
@@ -108,7 +108,7 @@ def birth_day_calculator():
   wait1()
   dotprint2()
     
-  g = int(raw_input ('Leviathan: How many years in advance would you like to look at?(1-150)'))
+  g = int(raw_input ('Leviathan: How many years in advance would you like to look at?(1-150) '))
   dotprint2()
   if g >= 151:
     print 'You do not need to look this far into the future.'
