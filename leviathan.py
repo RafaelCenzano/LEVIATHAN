@@ -108,9 +108,9 @@ def birth_day_calculator():
   wait1()
   dotprint2()
     
-  g = raw_input ('Leviathan: How many years in advance would you like to look at?(1-99)')
+  g = int(raw_input ('Leviathan: How many years in advance would you like to look at?(1-99)'))
   dotprint2()
-  if g >= 150
+  if g >= 150:
     print 'You do not need to look this far into the future.'
   else:
   
@@ -125,7 +125,7 @@ def birth_day_calculator():
     print 'Leviathan: The day your birthday will be on for the next {} years is:'.format(g)
     waithalf()
     
-    for x in range(1, int(float(g)) + 1):
+    for x in range(1, g + 1):
       wait()
       new_byear = date(new_bday.year + x, new_bday.month, new_bday.day)
       print "{:>2}. {}, {}" .format (x, new_byear.strftime('%Y/%d/%m'), calendar.day_name[new_byear.weekday()])
@@ -169,15 +169,15 @@ def birth_day_calculator():
       else:
         print 'Leviathan: Rerun program to use master program again'
       
-     else:
-        dotprint1()
-        if raw_input('Leviathan: That is all the Birth-Day-Calculator can provide would you like to try a different program? yes? or no?').lower() == 'yes':
-          dotprint2()
-          print 'insert new programs here'
+    else:
+      dotprint1()
+      if raw_input('Leviathan: That is all the Birth-Day-Calculator can provide would you like to try a different program? yes? or no?').lower() == 'yes':
+        dotprint2()
+        print 'insert new programs here'
       
-        else:
-          dotprint2()
-          print 'Leviathan: Rerun program to use master program again'
+      else:
+        dotprint2()
+        print 'Leviathan: Rerun program to use master program again'
           
 dotprint2()
 
