@@ -110,71 +110,75 @@ def birth_day_calculator():
     
   g = raw_input ('Leviathan: How many years in advance would you like to look at?(1-99)')
   dotprint2()
-    
-  print 'Leviathan: Your birthday was {}, {}'.format(calendar.day_name[birthday_date.weekday()], birthday_date.strftime ('%m/%d/%Y'))
-  dotprint2()
-  wait1()
-    
-  print 'Leviathan: Your most recent birthday was {}, {}'.format(calendar.day_name[new_bday.weekday()],new_bday.strftime ('%m/%d/%Y'))
-  dotprint2()
-  waithalf()
-    
-  print 'Leviathan: The day your birthday will be on for the next {} years is:'.format(g)
-  waithalf()
-    
-  for x in range(1, int(float(g)) + 1):
-    wait()
-    new_byear = date(new_bday.year + x, new_bday.month, new_bday.day)
-    print "{:>2}. {}, {}" .format (x, new_byear.strftime('%Y/%d/%m'), calendar.day_name[new_byear.weekday()])
-  wait2()
-  dotprint2()
-  
-  leap_year_count = 0
-
-  for v in range(1, int(difference_in_years)):
-    try:
-      t = date(new_bday.year + v, 2, 29)
-      leap_year_count += 1 
-    except:
-      pass
-
-  
-  if raw_input('Leviathan: Would you like to see some other information we know about you know? yes? or no?').lower() == 'yes':
-    dotprint1()
-      
-    print 'Leviathan: Your age is: {} years old'.format (difference_in_years)
-    dotprint1()
-    wait1()
-      
-    print 'Leviathan: You have been alive for: {} days'.format(delta.days)
-    dotprint1()
-    wait1()
-    
-    average_month_in_days = 365 / 12.0
-    
-    print 'You have been alive for about: {} months'.format(int (delta.days / average_month_in_days))
-    dotprint1()
-    wait1()
-    
-    print 'You have seen: {} leap years'.format(leap_year_count)
-    dotprint1()
-    wait1()
-    
-    if raw_input('Leviathan: That is all the Birth-Day-Calculator can provide would you like to try a different program? yes? or no?').lower() == 'yes':
-          print 'insert new programs here'
-          
-    else:
-      print 'Leviathan: Rerun program to use master program again'
-      
+  if g >= 150
+    print 'You do not need to look this far into the future.'
   else:
+  
+    print 'Leviathan: Your birthday was {}, {}'.format(calendar.day_name[birthday_date.weekday()], birthday_date.strftime ('%m/%d/%Y'))
+    dotprint2()
+    wait1()
+     
+    print 'Leviathan: Your most recent birthday was {}, {}'.format(calendar.day_name[new_bday.weekday()],new_bday.strftime ('%m/%d/%Y'))
+    dotprint2()
+    waithalf()
+    
+    print 'Leviathan: The day your birthday will be on for the next {} years is:'.format(g)
+    waithalf()
+    
+    for x in range(1, int(float(g)) + 1):
+      wait()
+      new_byear = date(new_bday.year + x, new_bday.month, new_bday.day)
+      print "{:>2}. {}, {}" .format (x, new_byear.strftime('%Y/%d/%m'), calendar.day_name[new_byear.weekday()])
+    wait2()
+    dotprint2()
+  
+    leap_year_count = 0
+
+    for v in range(1, int(difference_in_years)):
+      try:
+        t = date(new_bday.year + v, 2, 29)
+        leap_year_count += 1 
+      except:
+        pass
+  
+    
+    if raw_input('Leviathan: Would you like to see some other information we know about you know? yes? or no?').lower() == 'yes':
       dotprint1()
+        
+      print 'Leviathan: Your age is: {} years old'.format (difference_in_years)
+      dotprint1()
+      wait1()
+        
+      print 'Leviathan: You have been alive for: {} days'.format(delta.days)
+      dotprint1()
+      wait1()
+    
+      average_month_in_days = 365 / 12.0
+    
+      print 'You have been alive for about: {} months'.format(int (delta.days / average_month_in_days))
+      dotprint1()
+      wait1()
+    
+      print 'You have seen: {} leap years'.format(leap_year_count)
+      dotprint1()
+      wait1()
+    
       if raw_input('Leviathan: That is all the Birth-Day-Calculator can provide would you like to try a different program? yes? or no?').lower() == 'yes':
-        dotprint2()
-        print 'insert new programs here'
-      
+            print 'insert new programs here'
+          
       else:
-        dotprint2()
         print 'Leviathan: Rerun program to use master program again'
+      
+     else:
+        dotprint1()
+        if raw_input('Leviathan: That is all the Birth-Day-Calculator can provide would you like to try a different program? yes? or no?').lower() == 'yes':
+          dotprint2()
+          print 'insert new programs here'
+      
+        else:
+          dotprint2()
+          print 'Leviathan: Rerun program to use master program again'
+          
 dotprint2()
 
 waithalf()
