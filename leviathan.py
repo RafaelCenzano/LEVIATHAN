@@ -182,7 +182,7 @@ def birth_day_calculator():
 dotprint2()
 
 waithalf()
-if raw_input('Leviathan: Would you like to run Birth-Day-Calculator? yes? or no?').lower() == 'yes':
+if raw_input('Leviathan: Would you like to run Birth-Day-Calculator? yes? or no? ').lower() == 'yes':
     
     dotprint1()
     print 'Leviathan: Loading Birth-Day-Calculator'
