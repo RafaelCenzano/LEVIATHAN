@@ -38,7 +38,7 @@ def dotprint1():
 
 def dotprint2():
     print ' '
-    time.sleep(0.2)
+    time.sleep(0.1)
     print ' '
 
 def convert_timezone():
@@ -104,13 +104,13 @@ def birth_day_calculator():
   wait2()
   dotprint2()
   
-  print 'Leviathan: This is a program that can calculate what day of the week your birthday will be 1-99 years into the future '
+  print 'Leviathan: This is a program that can calculate what day of the week your birthday will be 1-150 years into the future '
   wait1()
   dotprint2()
     
-  g = int(raw_input ('Leviathan: How many years in advance would you like to look at?(1-99)'))
+  g = int(raw_input ('Leviathan: How many years in advance would you like to look at?(1-150)'))
   dotprint2()
-  if g >= 150:
+  if g >= 151:
     print 'You do not need to look this far into the future.'
   else:
   
@@ -126,7 +126,7 @@ def birth_day_calculator():
     waithalf()
     
     for x in range(1, g + 1):
-      wait()
+      time.sleep(0.02)
       new_byear = date(new_bday.year + x, new_bday.month, new_bday.day)
       print "{:>2}. {}, {}" .format (x, new_byear.strftime('%Y/%d/%m'), calendar.day_name[new_byear.weekday()])
     wait2()
@@ -189,7 +189,7 @@ if raw_input('Leviathan: Would you like to run Birth-Day-Calculator? yes? or no?
     count = 1
     while (count < 101):
         print 'Loading: {}%' .format (count)
-        time.sleep(0.03)
+        time.sleep(0.01)
         count = count + 1
   
     dotprint2()
