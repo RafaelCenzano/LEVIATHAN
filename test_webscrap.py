@@ -1,10 +1,12 @@
 import urllib2
 from bs4 import BeautifulSoup
 
-wiki = "https://en.wikipedia.org/wiki/List_of_state_and_union_territory_capitals_in_India"
+url = "http://lhs-sfusd-ca.schoolloop.com"
 
-page = urllib2.urlopen(wiki)
+req = urllib2.Request(url, headers={'User-Agent' : "Magic Browser"}) 
+con = urllib2.urlopen( req )
+print con.read()
 
-soup = BeautifulSoup(page)
+#soup = BeautifulSoup(page)
 
-print soup.prettify()
+#print soup.prettify()
