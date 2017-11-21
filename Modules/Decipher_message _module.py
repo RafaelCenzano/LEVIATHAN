@@ -21,11 +21,11 @@ def rot13(s):
 
 	return result
 
-message_to_change = input ('What message would you like to encrypt  ')
+message_to_change = input ('What message would you like to decipher  ')
 time.sleep(0.5)
 
-print(rot13(message_to_change))
+print(rot13(rot13(message_to_change))
 
-#This code allows you to see the original untoched message
-#print(rot13(rot13(message_to_change)))
-#This code can be used to decypher messages
+#This code allows you to see the encrypted message
+#print(rot13(message_to_change))
+#This code can be used to encrypt messages
