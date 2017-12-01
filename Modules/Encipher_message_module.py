@@ -23,8 +23,10 @@ def rot13(s):
 
 message_to_change = input ('What message would you like to encrypt  ')
 time.sleep(0.5)
+a = G
 
 print(rot13(message_to_change))
+print('Key: {}').format(a)
 
 #This code allows you to see the original untoched message
 #print(rot13(rot13(message_to_change)))
